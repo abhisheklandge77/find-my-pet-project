@@ -4,6 +4,7 @@ import signupPageImg from '../../assets/cute-puppy.jpg'; // This is temperory im
 import { FaUserAlt, FaEnvelope, FaLock } from 'react-icons/fa';
 import { GoogleLogin } from 'react-google-login';
 import './SignUpPage.css';
+import { useNavigate } from 'react-router-dom';
 const clientId = "770468930253-im9ha5fop8ak6d6m4nsn0lktikj52tr7.apps.googleusercontent.com";
 console.log("clientId:::", clientId);
 
@@ -14,6 +15,8 @@ function SignUpPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+
+  const navigate = useNavigate();
 
   // saving user data to database
   const saveUserData = () => {
@@ -29,6 +32,7 @@ function SignUpPage() {
     }
     // const response = await saveUser(formData);
     console.log("Saved data successfully...", formData);
+    navigate("/");
   }
 
   // set every field value and validate fields
@@ -108,6 +112,8 @@ function SignUpPage() {
             isSignedIn={true}
             className="google-signup-btn"
           />
+
+          <a className="link" href="/login">Already have an account ?</a>
 
           {errorMsg && <div className="error-message">{errorMsg}</div>}
 

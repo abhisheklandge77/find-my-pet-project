@@ -1,10 +1,10 @@
-.signup-page-background{
+.login-page-background{
     background-color: aliceblue;
     height: 100vh;
     display: flex;
     align-items: center;
 }
-.signup-page-container{
+.login-page-container{
     width: 60%;
     margin: 0 auto;
     display: flex;
@@ -13,13 +13,13 @@
     /* padding: 3rem 0; */
     box-shadow: 10px 10px 25px #d9d7d7;
 }
-.signup-form{
+.login-form{
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.signup-form h1{
+.login-form h1{
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -70,7 +70,7 @@
 .register-btn:hover{
     background-color: #4292dc; /*#f5c21b;*/
 }
-.google-signup-btn{
+.google-login-btn{
     width: 60%;
     margin: 10px auto;
     display: flex;
@@ -94,11 +94,11 @@
 }
 
 @media only screen and (max-width: 800px){
-    .signup-page-container{
+    .login-page-container{
         width: 80%;
         justify-content: center;
     }
-    .signup-form{
+    .login-form{
         width: 80%;
     }
     .image-container{

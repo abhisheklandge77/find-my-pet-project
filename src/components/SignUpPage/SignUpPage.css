@@ -6,7 +6,7 @@
 }
 .signup-page-container{
     width: 60%;
-    margin: 0 auto;
+    margin: 0 auto 5rem auto;
     display: flex;
     background-color: #fff;
     border-radius: 10px;
@@ -93,7 +93,7 @@
     height: 100%;
 }
 
-@media only screen and (max-width: 800px){
+@media screen and (min-width: 900px){
     .signup-page-container{
         width: 80%;
         justify-content: center;

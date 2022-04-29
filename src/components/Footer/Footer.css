@@ -1,0 +1,22 @@
+.footer-container{
+    width: 100%;
+    /* bottom: 0; */
+    /* position: fixed; */
+    color: #fff;
+    background-color: #18191b;
+    text-align: center;
+    padding: 1rem 0;
+}
+.footer-icons svg{
+    fill: #fff;
+    margin: 0 .5rem;
+    width: 25px;
+    height: 25px;
+}
+.footer-icons svg:hover{
+    fill: #f56a14;
+    transition: .3s;
+}
+.footer-text p{
+    margin: 0;
+}

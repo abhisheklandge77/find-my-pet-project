@@ -58,10 +58,10 @@
     color: #fff;
 }
 .tab-active{
-    color: #e8620e !important;
+    color: #f56a14 !important;
 }
 .tab:hover{
-    color: #e8620e;
+    color: #f56a14;
     transition: 0.3s;
 }
 .signin-button{
@@ -75,7 +75,7 @@
     text-decoration: none;
 }
 .signin-button:hover{
-    background-color: #e8620e;
+    background-color: #f56a14;
     transition: 0.3s;
 }
 

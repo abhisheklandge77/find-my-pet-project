@@ -12,6 +12,7 @@ import Navbar from './components/Navbar/Navbar';
 import AboutPage from './components/AboutPage/AboutPage';
 import ServicesPage from './components/ServicesPage/ServicesPage';
 import ContactPage from './components/ContactPage/ContactPage';
+// import Footer from './components/Footer/Footer';
 
 function App() {
   return (

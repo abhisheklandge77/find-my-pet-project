@@ -1,5 +1,111 @@
 .contact-page-container{
     margin: 0;
-    padding: 0;
-    position: absolute;
+    padding-top: 5rem;
+    background: url("../../assets/find-my-pet-bg-2.webp");
+    background-size: cover;
+}
+.contact-title{
+    text-align: center;
+}
+.contact-form{
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.contact-form input{
+    outline: none;
+    border: 1px solid #969494;
+    border-radius: 5px;
+    padding: .7rem;
+    margin-bottom: 1rem;
+}
+.invalid-input{
+    border: 1px solid red !important;
+}
+.contact-form textarea{
+    outline: none;
+    border: 1px solid #969494;
+    border-radius: 5px;
+    padding: .7rem;
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submit-btn{
+    border: none;
+    outline: none;
+    padding: .7rem;
+    color: #fff;
+    background-color: #f56a14;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background-color: #e8620e;
+}
+.disable-btn{
+    pointer-events: none !important;
+    background-color: gray !important;
+}
+
+.contact-info-container{
+    width: 80%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact-details-wrapper{
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+.contact-details{
+    display: flex;
+    align-items: center;
+}
+.icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    margin: 0 1rem 0 1.5rem;
+}
+.icon-wrapper svg{
+    fill: #f56a14;
+    width: 20px;
+    height: 20px;
+}
+.map-container{
+    width: 100%;
+    height: 250px;
+    margin-top: 1rem;
+}
+.marker{
+    background: url("../../assets/marker.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    /* border-radius: 50%; */
+    cursor: pointer;
+}
+
+@media screen and (min-width: 900px){
+    .contact-form{
+        width: 40%;
+    }
+    .contact-info-container{
+        flex-direction: row;
+    }
+    .contact-details-wrapper{
+        width: 48%;
+    }
+    .map-container{
+        width: 48%;
+        margin: 0;
+    }
 }

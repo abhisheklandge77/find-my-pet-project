@@ -5,7 +5,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelopeOpen } from "react-icons/fa";
 import Footer from "../Footer/Footer";
 import mapboxgl from 'mapbox-gl';
 import './ContactPage.css';
-mapboxgl.accessToken = process.env.REACT_APP_FIND_MY_PET_MAPBOX_ACCESS_TOKEN;
+mapboxgl.accessToken = "pk.eyJ1IjoiYWJoaXNoZWstbGFuZGdlIiwiYSI6ImNsMm42Z3ZqazB1MHozY211aGptM2YzZnoifQ.3-Ki2MdqJu95TUAeB2BWkg";
 
 function ContactPage() {
     const [name, setName] = useState("");

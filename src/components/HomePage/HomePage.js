@@ -17,8 +17,8 @@ function HomePage() {
                 <div className="info-subsection1">
                     <div className="section-text-container">
                         <div className="text-wrapper">
-                            <h1>Section Title</h1>
-                            <p>Dogs and cats are a common member of the family in homes across the US. No population-based data exist on the frequency of pets getting lost from the home and lost pets can be a source of human and animal suffering. Our primary objective was to determine the percentage of owned dogs and cats that were lost, and of these, what percentages of pets were recovered</p>
+                            <h1>Do You Know?</h1>
+                            <p>Each year, approximately 10 million pets are lost in some countries, and millions of those end up in the nation's animal shelters. Tragically, only 15 percent of dogs and 2 percent of cats in shelters without ID tags or microchips are reunited with their owners</p>
                         </div>
                     </div>
                     <div className="section-image-container">
@@ -35,8 +35,8 @@ function HomePage() {
                     </div>
                     <div className="section-text-container">
                         <div className="text-wrapper">
-                            <h1>Section Title</h1>
-                            <p>Dogs and cats are a common member of the family in homes across the US. No population-based data exist on the frequency of pets getting lost from the home and lost pets can be a source of human and animal suffering. Our primary objective was to determine the percentage of owned dogs and cats that were lost, and of these, what percentages of pets were recovered</p>
+                            <h1>How many pet owners are in India?</h1>
+                            <p>The number of households with pet dogs and cats in India accounted for approximately 17 million and 1.5 million respectively in 2021. The increase in the number of households getting pets had led to a two fold increase . </p>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ function HomePage() {
                 <div className="our-mission-content">
                     <div className="our-mission-text">
                         <span className="text-quotes-left"><FaQuoteLeft /></span>
-                        <p>Dogs and cats are a common member of the family in homes across the US. No population-based data exist on the frequency of pets getting lost from the home and lost pets can be a source of human and animal suffering. Our primary objective was to determine the percentage of owned dogs and cats that were lost, and of these, what percentages of pets were recovered</p>
+                        <p>BECAUSE EVERY RESCUE MISSION IS POSSIBLE!. We show the animals the way home. SMALL CONTRIBUTE FOR SAVE THE ANIMAL LIFE.</p>
                         <span className="text-quotes-right"><FaQuoteRight /></span>
                     </div>
                 </div>
@@ -73,13 +73,13 @@ function HomePage() {
                 <div className="reviews-wrapper">
                 <div className="review-text">
                     <span className="text-quotes-left"><FaQuoteLeft /></span>
-                    <p>Dogs and cats are a common member of the family in homes across the US. No population-based data exist on the frequency of pets getting lost from the home and lost pets can be a source of human and animal suffering. Our primary objective was to determine the percentage of owned dogs and cats that were lost, and of these, what percentages of pets were recovered</p>
+                    <p>I want to Thank you for providing shelter and care to stray dogs. You are doing a wonderful service and I hope more people are inspired by you. In today's world when people commit such heinous acts towards animals, your love and passion towards them is truly an act of humanity.</p>
                     <span className="text-quotes-right"><FaQuoteRight /></span>
                     <p className="reviewed-by">- Rahul</p>
                 </div>
                 <div className="review-text">
                     <span className="text-quotes-left"><FaQuoteLeft /></span>
-                    <p>Dogs and cats are a common member of the family in homes across the US. No population-based data exist on the frequency of pets getting lost from the home and lost pets can be a source of human and animal suffering. Our primary objective was to determine the percentage of owned dogs and cats that were lost, and of these, what percentages of pets were recovered</p>
+                    <p>you are save the domestic animal life so thank you. your are good working for animals.</p>
                     <span className="text-quotes-right"><FaQuoteRight /></span>
                     <p className="reviewed-by">- Barkha</p>
                 </div>

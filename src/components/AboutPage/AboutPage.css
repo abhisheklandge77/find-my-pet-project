@@ -1,6 +1,111 @@
 .about-page-container{
     margin: 0;
-    padding: 0;
-    position: absolute;
-    height: 1500px;
+    background-color: #f8f8f8;
+}
+.what-we-do-section{
+    background: url("../../assets/about-image.jpg");
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: darken;
+    height: 80vh;
+    padding-top: 12vh;
+    margin-bottom: 3rem;
+}
+.what-we-do-section-title{
+    color: #f56a14;
+    font-size: .8rem;
+}
+.section-text{
+    width: 40%;
+    color: #fff;
+    padding: 0 2rem;
+}
+.section-text p{
+    font-size: .9rem;
+}
+.section-title{
+    text-align: center;
+}
+.cards-container{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    flex-direction: column;
+    margin: 2.5rem auto;
+}
+.card-wrapper{
+    width: 100%;
+}
+.card{
+    width: 100%;
+    height: 340px;
+    background: url("../../assets/Abhi-profile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+.card-info{
+    background-color: #fff;
+    width: 82%;
+    padding: .8rem 0;
+}
+.card-name{
+    display: flex;
+    align-items: center;
+}
+.card-name p{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+}
+.card-line{
+    background-color: #000;
+    height: 5px;
+    width: 14%;
+    margin-right: .5rem;
+}
+.card-role{
+    color: gray;
+    margin-left: 17%;
+    margin-top: .5rem;
+    margin-bottom: 0;
+    font-size: .8rem;
+}
+.card-icons{
+    padding-top: .7rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.card-icons svg{
+    width: 25px;
+    height: 25px;
+    fill: gray;
+    margin: 0 .5rem;
+}
+.card-icons svg:hover{
+    transition: .3s;
+    fill: #f56a14;
+}
+
+@media screen and (min-width: 900px){
+    .what-we-do-section{
+        padding-top: 20vh;
+    }
+    .what-we-do-section-title{
+        font-size: 1.1rem;
+    }
+    .section-text p{
+        font-size: 1.2rem;
+    }
+    .cards-container{
+        flex-direction: row;
+    }
+    .card-wrapper{
+        width: 30%;
+    }
+    .card-icons{
+        margin-bottom: .5rem;
+    }
 }

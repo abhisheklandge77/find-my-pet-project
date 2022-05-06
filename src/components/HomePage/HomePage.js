@@ -18,7 +18,7 @@ function HomePage() {
                     <div className="section-text-container">
                         <div className="text-wrapper">
                             <h1>Do You Know?</h1>
-                            <p>Each year, approximately 10 million pets are lost in some countries, and millions of those end up in the nation's animal shelters. Tragically, only 15 percent of dogs and 2 percent of cats in shelters without ID tags or microchips are reunited with their owners</p>
+                            <p>The total Livestock population is 535.78 million in the country showing an increase of 4.6% over Livestock Census2012. The largest livestock population was recorded in the state of Uttar Pradesh (68 million), followed by Rajasthan (56.8 million) and Madhya Pradesh (40.6 million) .  Each year, approximately 10 million pets are lost in some countries, and mostly lost animas are dogs and cats.600 millions homeless animals in the  world(by news report),and lost animals cases are more in that homeless animals.</p>
                         </div>
                     </div>
                     <div className="section-image-container">
@@ -36,7 +36,7 @@ function HomePage() {
                     <div className="section-text-container">
                         <div className="text-wrapper">
                             <h1>How many pet owners are in India?</h1>
-                            <p>The number of households with pet dogs and cats in India accounted for approximately 17 million and 1.5 million respectively in 2021. The increase in the number of households getting pets had led to a two fold increase . </p>
+                            <p>The number of households with pet dogs and cats in India accounted for approximately 17 million and 1.5 million respectively in 2021. The increase in the number of households getting pets had led to a two fold increase .Dogs and cat onwners are more in india.6,00,000 pets are adopted every year.Bengaluru emerged as the most pet-friendly city in India, followed by Mumbai, in a survey of over 1,500 pet owners across India. </p>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ function HomePage() {
                 <div className="our-mission-content">
                     <div className="our-mission-text">
                         <span className="text-quotes-left"><FaQuoteLeft /></span>
-                        <p>BECAUSE EVERY RESCUE MISSION IS POSSIBLE!. We show the animals the way home. SMALL CONTRIBUTE FOR SAVE THE ANIMAL LIFE.</p>
+                        <p>BECAUSE EVERY RESCUE MISSION IS POSSIBLE!.We're on a mission to save animals—and we need you! The first step in saving the animals. All the pets that have been registered in our site, if they ever get lost, we will help you to find them.. We show the animals the way home. SMALL CONTRIBUTE FOR SAVE THE ANIMAL LIFE.</p>
                         <span className="text-quotes-right"><FaQuoteRight /></span>
                     </div>
                 </div>
@@ -73,13 +73,13 @@ function HomePage() {
                 <div className="reviews-wrapper">
                 <div className="review-text">
                     <span className="text-quotes-left"><FaQuoteLeft /></span>
-                    <p>I want to Thank you for providing shelter and care to stray dogs. You are doing a wonderful service and I hope more people are inspired by you. In today's world when people commit such heinous acts towards animals, your love and passion towards them is truly an act of humanity.</p>
+                    <p>I would like to thank you because you found my lost dog. You are doing a wonderful service.Your work is also very fast, you found my dog very quickly.</p>
                     <span className="text-quotes-right"><FaQuoteRight /></span>
                     <p className="reviewed-by">- Rahul</p>
                 </div>
                 <div className="review-text">
                     <span className="text-quotes-left"><FaQuoteLeft /></span>
-                    <p>you are save the domestic animal life so thank you. your are good working for animals.</p>
+                    <p>First of all thank you for find my cat.I was very upset because my cat was not meeting me for two days but you found my cat in one day. I am blessed because I am a customer of your website.</p>
                     <span className="text-quotes-right"><FaQuoteRight /></span>
                     <p className="reviewed-by">- Barkha</p>
                 </div>

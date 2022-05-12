@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import homeBackground1 from "../../assets/home-background.jpg";
 import homeBackground2 from "../../assets/home-background-2.jpg";
 import homeBackground3 from "../../assets/home-background-3.jpg";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import "./ImageSlider.css";
 import { useNavigate } from 'react-router-dom';
+import UserContext from '../../UserContext/store';
 
 function ImageSlider() {
+    const userInfo = useContext(UserContext);
     const slides = [homeBackground1, homeBackground2, homeBackground3];
     const [activeSlide, setActiveSlide] = useState(0);
 
@@ -39,7 +41,7 @@ function ImageSlider() {
             } else if (activeSlide === slides.length - 1) {
                 setActiveSlide(0);
             }
-        },3000);
+        }, 3000);
 
         return () => window.clearInterval(timer);
     }, [activeSlide, slides.length]);
@@ -61,7 +63,11 @@ function ImageSlider() {
             <div className="text-container">
                 <p className="header-text">DO YOU CARE ?</p>
                 <p className="message-text">WE DO CARE FOR OUR BELOVED FRIENDS</p>
-                <button className="home-signup-btn" onClick={() => navigate("/login")}>Sign Up <FaAngleRight /></button>
+                {
+                    !(userInfo && userInfo?.id) &&
+                    <button className="home-signup-btn" onClick={() => navigate("/login")}>Sign In <FaAngleRight /></button>
+                }
+
             </div>
             <div className="dots-container">
                 {slides.map((item, index) => {

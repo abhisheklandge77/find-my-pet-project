@@ -20,7 +20,7 @@ function AboutPage() {
                 </div>
                 <div className="cards-container">
                     <div className="card-wrapper">
-                        <div className="card">
+                        <div className="card1">
                             <div className="card-info">
                                 <div className="card-name">
                                     <span className="card-line"></span>
@@ -36,7 +36,7 @@ function AboutPage() {
                         </div>
                     </div>
                     <div className="card-wrapper">
-                        <div className="card">
+                        <div className="card2">
                             <div className="card-info">
                                 <div className="card-name">
                                     <span className="card-line"></span>
@@ -46,13 +46,13 @@ function AboutPage() {
                             </div>
                         </div>
                         <div className="card-icons">
-                            <a href='https://instagram.com'><FaInstagram /></a>
-                            <a href='https://facebook.com'><FaGithub /></a>
-                            <a href='https://twitter.com'><FaLinkedin /></a>
+                            <a href='https://instagram.com/shaileshpalavakar?igshid=YmMyMTA2M2Y='><FaInstagram /></a>
+                            <a href='https://github.com/shailesh89-art'><FaGithub /></a>
+                            <a href='https://www.linkedin.com/in/shailesh-palavakar-331085223'><FaLinkedin /></a>
                         </div>
                     </div>
                     <div className="card-wrapper">
-                        <div className="card">
+                        <div className="card3">
                             <div className="card-info">
                                 <div className="card-name">
                                     <span className="card-line"></span>
@@ -62,9 +62,9 @@ function AboutPage() {
                             </div>
                         </div>
                         <div className="card-icons">
-                            <a href='https://instagram.com'><FaInstagram /></a>
-                            <a href='https://facebook.com'><FaGithub /></a>
-                            <a href='https://twitter.com'><FaLinkedin /></a>
+                            <a href='https://instagram.com/__alii07?igshid=YmMyMTA2M2Y='><FaInstagram /></a>
+                            <a href='https://github.com/Xlr8boiop'><FaGithub /></a>
+                            <a href='https://www.linkedin.com/in/wahid-pathan-0a1b8b239'><FaLinkedin /></a>
                         </div>
                     </div>
                 </div>

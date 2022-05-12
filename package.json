@@ -9,6 +9,7 @@
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "mapbox-gl": "^2.8.2",
+    "qrcode.react": "^3.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-google-login": "^5.2.2",

@@ -36,10 +36,30 @@
 .card-wrapper{
     width: 100%;
 }
-.card{
+.card1{
     width: 100%;
     height: 340px;
     background: url("../../assets/Abhi-profile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+.card2{
+    width: 100%;
+    height: 340px;
+    background: url("../../assets/Shailesh-profile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+.card3{
+    width: 100%;
+    height: 340px;
+    background: url("../../assets/Wahid-profile.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

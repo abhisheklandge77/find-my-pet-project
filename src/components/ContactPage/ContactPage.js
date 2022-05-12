@@ -5,6 +5,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelopeOpen } from "react-icons/fa";
 import Footer from "../Footer/Footer";
 import mapboxgl from 'mapbox-gl';
 import './ContactPage.css';
+import service from "../../services";
 mapboxgl.accessToken = "pk.eyJ1IjoiYWJoaXNoZWstbGFuZGdlIiwiYSI6ImNsMm42Z3ZqazB1MHozY211aGptM2YzZnoifQ.3-Ki2MdqJu95TUAeB2BWkg";
 
 function ContactPage() {
@@ -34,25 +35,61 @@ function ContactPage() {
         }
     }
 
+    const onSendBtnClick = async () => {
+        clearAllFields();
+        const allFieldsValid = checkAllFieldsValid(); // checking all fields are valid
+        if (!allFieldsValid) {
+            alert("Please enter name and email...");
+            return;
+        }
+        try {
+            const formData = {
+                email,
+                name
+            };
+            const response = await service.sendContactEmail(formData);
+            console.log("Response::=", response);
+            if (response) {
+                alert("Thanks for contacting us :)");
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    const checkAllFieldsValid = () => {
+        if (!name || !email) {
+            return false;
+        }
+        return true;
+    }
+
+    const clearAllFields = () => {
+        setEmail("");
+        setName("");
+        setMessage("");
+        setPhone("");
+    }
+
     useEffect(() => {
         const map = new mapboxgl.Map({
-          container: mapContainerRef.current,
-          style: 'mapbox://styles/mapbox/streets-v11',
-          center: [73.8615,18.4786],
-          zoom: 10,
+            container: mapContainerRef.current,
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.8615, 18.4786],
+            zoom: 10,
         });
-    
+
         map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
         //add marker to map
         const el = document.createElement('div');
         el.className = 'marker';
         new mapboxgl.Marker(el)
-        .setLngLat([73.8615,18.4786])
-        .addTo(map);
-    
+            .setLngLat([73.8615, 18.4786])
+            .addTo(map);
+
         return () => map.remove();
-      }, []);
+    }, []);
 
     return (
         <div className="contact-page-container">
@@ -71,7 +108,7 @@ function ContactPage() {
                     value={phone}
                     onChange={(value) => onFieldChange("phone", value)} />
                 <textarea placeholder="Your Message" value={message} onChange={(e) => onFieldChange("message", e.target.value)} rows={8} />
-                <button className={!isEmailInvallid ? "submit-btn" : "submit-btn disable-btn"} disabled={isEmailInvallid} onClick={() => alert("Thanks for contacting us...")}>Send</button>
+                <button className={!isEmailInvallid ? "submit-btn" : "submit-btn disable-btn"} disabled={isEmailInvallid} onClick={() => onSendBtnClick()}>Send</button>
             </div>
             <div className="contact-info-container">
                 <div className="contact-details-wrapper">
@@ -89,7 +126,7 @@ function ContactPage() {
                     </div>
                     <div className="social-media-links"></div>
                 </div>
-                <div className="map-container"  ref={mapContainerRef}>
+                <div className="map-container" ref={mapContainerRef}>
                 </div>
             </div>
             <Footer />

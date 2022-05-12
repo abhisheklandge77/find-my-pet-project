@@ -42,6 +42,7 @@
     cursor: pointer;
 }
 .submit-btn:hover{
+    transition: .3s;
     background-color: #e8620e;
 }
 .disable-btn{

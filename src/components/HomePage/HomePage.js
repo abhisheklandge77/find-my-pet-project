@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSlider from "../ImageSlider/ImageSlider";
+import { useNavigate } from "react-router-dom";
 import sectionImage1 from "../../assets/lost-pets-1.jpg";
 import sectionImage2 from "../../assets/lost-pets-2.jpg";
 import qrCodeImage from "../../assets/qr-code-home.jpg";
@@ -8,6 +9,9 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import './HomePage.css';
 
 function HomePage() {
+
+    const navigate = useNavigate();
+
     return (
         <div className="home-page-container">
             <section className="image-slider">
@@ -44,9 +48,9 @@ function HomePage() {
             <section className="qrcode-info-section">
                 <div className="qrcode-info-wrapper">
                     <div className="qrcode-info">
-                        <h1>Section Title</h1>
+                        <h1>QR Code For Your Pet</h1>
                         <p>Dogs and cats are a common member of the family in homes across the US. No population-based data exist on the frequency of pets getting lost from the home and lost pets can be a source of human and animal suffering. Our primary objective was to determine the percentage of owned dogs and cats that were lost, and of these, what percentages of pets were recovered</p>
-                        <button className="qrcode-info-btn">Know More</button>
+                        <button className="qrcode-info-btn" onClick={() => navigate("/services")}>Know More</button>
                     </div>
                     <div className="qrcode-image">
                         <img src={qrCodeImage} alt="qrcode" />

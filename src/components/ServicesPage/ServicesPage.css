@@ -1,5 +1,132 @@
-.services-page-container{
+.services-page-container {
     margin: 0;
     padding: 0;
+}
+
+.services-top-section {
+    background: url("../../assets//services-cat-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.services-title {
+    width: 50%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.services-title h1 {
+    color: #f56a14;
+    letter-spacing: .3rem;
+}
+
+.services-wrapper {
+    background: url("../../assets/services-bg.webp");
+    padding: 6rem 0;
+}
+
+.services-cards-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.service-card-border{
+    border: 1px solid rgba(0,0,0,.2);
+    position: relative;
+    padding: 3rem 2rem;
+    border-radius: 6px;
+    background-color: #fff;
+    text-align: center;
+}
+.service-card-border:hover{
+    transition: .3s;
+    box-shadow: 8px 8px 15px gray;
+}
+.image-bg {
     position: absolute;
+    background-color: #FEF0EB;
+    border-radius: 68% 32% 27% 73% / 60% 62% 38% 40%;
+    width: 36%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -36%;
+    margin-left: 22%;
+}
+.image-bg svg {
+    fill: #f56a14;
+    width: 40px;
+    height: 40px;
+}
+.service-card-title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.service-card-title:hover{
+    color: #f56a14;
+    transition: .3s;
+}
+.service-card-text{
+    color: gray;
+}
+.services-btn{
+    outline: none;
+    border: 1px solid #f56a14;
+    background-color: transparent;
+    color: #f56a14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1.5rem;
+    margin: 1.5rem auto 0 auto;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.services-btn:hover{
+    color: #fff;
+    background-color: #f56a14;
+    transition: .3s ease-out;
+}
+
+@media screen and (min-width: 900px){
+    .services-title {
+        width: 35%;
+    }
+    .services-title h1 {
+        letter-spacing: .5rem;
+    }
+    .services-cards-container {
+        width: 70%;
+        flex-direction: row;
+    }
+    .service-card {
+        width: 45%;
+        margin-bottom: 0;
+    }
+    .image-bg {
+        position: absolute;
+        background-color: #FEF0EB;
+        border-radius: 68% 32% 27% 73% / 60% 62% 38% 40%;
+        width: 26%;
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -26%;
+        margin-left: 30%;
+    }
 }

@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-// import saveUser from '../../services'; // This is save user api for saving user info to database we will do it later
+import React, { useEffect, useState } from 'react';
 import loginPageImg from '../../assets/cute-puppy2.jpg';
 import { FaUserAlt, FaLock } from 'react-icons/fa';
 import { GoogleLogin } from 'react-google-login';
 import './LoginPage.css';
 import { useNavigate } from 'react-router-dom';
-const clientId = "770468930253-im9ha5fop8ak6d6m4nsn0lktikj52tr7.apps.googleusercontent.com";
-console.log("clientId:::", clientId);
+import service from '../../services';
+const clientId = "96874383155-t417cmiso17b47nsq59jqpsoi16pim9t.apps.googleusercontent.com";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -17,19 +16,33 @@ function LoginPage() {
   const navigate = useNavigate();
 
   // saving user data to database
-  const saveUserData = () => {
-    console.log("Clicked...");
+  const saveUserData = async () => {
     const allFieldsValid = checkAllFieldsValid(); // checking all fields are valid
     if (!allFieldsValid) {
       return;
     }
-    const formData = {
-      email,
-      password
+    try {
+      const formData = {
+        email,
+        password
+      };
+      const response = await service.loginUser(formData);
+      console.log("Response::=", response);
+      if (response?._id) {
+        const userData = {
+          id: response._id,
+          name: response.name
+        };
+        window.sessionStorage.setItem("userData", JSON.stringify(userData));
+        navigate("/");
+      } else if (response === "Invalid Credentials") {
+        setErrorMsg("Incorrect Email or Password !");
+      } else if (response === "User does not exist") {
+        setErrorMsg("User does not exist !");
+      }
+    } catch (err) {
+      console.log(err)
     }
-    // const response = await saveUser(formData);
-    console.log("Saved data successfully...", formData);
-    navigate("/")
   }
 
   // set every field value and validate fields
@@ -56,16 +69,40 @@ function LoginPage() {
       return true;
     }
   }
-  // Google sign in work is not done yet we will do it later
   // Google sign in on success
-  const onSuccess = (res) => {
-    console.log('Login Success: currentUser:', res.profileObj);
+  const onSuccess = async (res) => {
+    const { name, email } = res.profileObj;
+    try {
+      const formData = {
+        name,
+        email,
+        fromGoogle: true
+      };
+      const response = await service.saveUserFromGoogle(formData);
+      if (response?._id) {
+        const userData = {
+          id: response._id,
+          name: response.name
+        };
+        window.sessionStorage.setItem("userData", JSON.stringify(userData));
+        navigate("/");
+      }
+    } catch (err) {
+      console.log(err)
+    }
   };
 
   // Google sign in on failure
   const onFailure = (res) => {
     console.log('Login failed: res:', res);
+    if (res.error) {
+      setErrorMsg("Google Sign In Failed !");
+    }
   };
+
+  useEffect(() => {
+    window.sessionStorage.removeItem("userData");
+  }, []);
 
   return (
     <div className="login-page-background">
@@ -90,7 +127,7 @@ function LoginPage() {
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
-            isSignedIn={true}
+            isSignedIn={false}
             className="google-login-btn"
           />
 

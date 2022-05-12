@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { BsList, BsX } from "react-icons/bs";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa';
+// import logo from "../../assets/find-my-pet-logo2.png";
 import './Navbar.css';
+import UserContext from '../../UserContext/store';
 
 function Navbar() {
+    const userInfo = useContext(UserContext);
     const [showMenu, setShowMenu] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
 
@@ -27,11 +31,20 @@ function Navbar() {
             tabName: "Contact",
             pathName: "/contact"
         },
-    ]
+    ];
+
+    useEffect(() => {
+        if (location.pathname === "/services/get-qr-code" || location.pathname === "/services/pet-selling") {
+            setActiveTab(2)
+        }
+    }, [location.pathname]);
 
     return (
         <div className={(location.pathname === "/register" || location.pathname === "/login") ? "hide-navbar" : "navbar"}>
             <div className="navbar-header">
+                {/* <div className="logo">
+                <img src={logo} alt="logo" />
+                </div> */}
                 <h2 className="logo">FindMyPet</h2>
                 <div onClick={() => setShowMenu(!showMenu)} className="hamburger-menu-icon">
                     {!showMenu ? <BsList /> : <BsX />}
@@ -49,9 +62,17 @@ function Navbar() {
                         })
                     }
                 </div>
-                <div className="navbar-btn-container">
-                    <button className="signin-button" onClick={() => navigate("/login")}>Sign In</button>
-                </div>
+                {
+                    (userInfo && userInfo?.id) ?
+                        (<div className="navbar-user">
+                            <span className="navbar-username"><p>Hey {userInfo.name}</p><FaUserAlt /></span>
+                            <button className="logout-button" onClick={() => navigate("/login")}>Logout</button>
+                        </div>)
+                        : (<div className="navbar-btn-container">
+                            <button className="signin-button" onClick={() => navigate("/login")}>Sign In</button>
+                        </div>)
+                }
+
             </div>
         </div>
     )

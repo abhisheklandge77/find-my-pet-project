@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { BsList, BsX } from "react-icons/bs";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
-// import logo from "../../assets/find-my-pet-logo2.png";
+import logo from "../../assets/find-my-pet-logo.png";
 import './Navbar.css';
 import UserContext from '../../UserContext/store';
 
@@ -40,12 +40,12 @@ function Navbar() {
     }, [location.pathname]);
 
     return (
-        <div className={(location.pathname === "/register" || location.pathname === "/login") ? "hide-navbar" : "navbar"}>
+        <div className={(location.pathname === "/register" || location.pathname === "/login" || location.pathname.includes("lost-pet")) ? "hide-navbar" : "navbar"}>
             <div className="navbar-header">
-                {/* <div className="logo">
+                <div className="logo">
                 <img src={logo} alt="logo" />
-                </div> */}
-                <h2 className="logo">FindMyPet</h2>
+                </div>
+                {/* <h2 className="logo">FindMyPet</h2> */}
                 <div onClick={() => setShowMenu(!showMenu)} className="hamburger-menu-icon">
                     {!showMenu ? <BsList /> : <BsX />}
                 </div>

@@ -15,6 +15,7 @@ import ContactPage from './components/ContactPage/ContactPage';
 import QRCodeForm from './components/QRCodeForm/QRCodeForm';
 import UserContext from './UserContext/store';
 import PetSelling from './components/PetSelling/PetSelling';
+import LostPet from './components/LostPet/LostPet';
 
 function App() {
   const [userInfo, setUserInfo] = useState();
@@ -44,6 +45,7 @@ function App() {
           <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/services/get-qr-code" element={<QRCodeForm />}></Route>
           <Route path="/services/pet-selling" element={<PetSelling />}></Route>
+          <Route path="/lost-pet/:id" element={<LostPet />}></Route>
         </Routes>
       </UserContext.Provider>
     </Router>

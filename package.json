@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
+    "jspdf": "^2.5.1",
     "mapbox-gl": "^2.8.2",
     "qrcode.react": "^3.0.1",
     "react": "^18.0.0",

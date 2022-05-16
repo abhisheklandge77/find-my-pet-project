@@ -1,8 +1,8 @@
 import React from "react";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import { useNavigate } from "react-router-dom";
-import sectionImage1 from "../../assets/lost-pets-1.jpg";
-import sectionImage2 from "../../assets/lost-pets-2.jpg";
+import sectionImage1 from "../../assets/homepage-pets-1.jpg";
+import sectionImage2 from "../../assets/homepage-pets-2.jpg";
 import qrCodeImage from "../../assets/qr-code-home.jpg";
 import Footer from "../Footer/Footer";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";

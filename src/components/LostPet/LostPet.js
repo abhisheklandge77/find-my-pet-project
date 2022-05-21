@@ -16,6 +16,24 @@ function LostPet() {
     const [personPhone, setPersonPhone] = useState("");
     const [personMessage, setPersonMessage] = useState("");
     const [isEmailInvallid, setIsEmailInvallid] = useState(false);
+    const [lat, setLat] = useState("");
+    const [long, setLong] = useState("");
+
+    const getCurrentGeoLocation = () => {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var accuracy = position.coords.accuracy;
+            setLat(position.coords.latitude);
+            setLong(position.coords.longitude);
+            if (latitude && longitude) {
+                alert("Thanks for sharing this location :)");
+            }
+            console.log("Lat:", latitude, "Long: ", longitude, "Accuracy: ", accuracy);
+        },
+            function error(msg) { console.log('Please enable your GPS position feature.', msg); },
+            { maximumAge: 10000, timeout: 5000, enableHighAccuracy: true });
+    }
 
     const getUserDetails = async (userId) => {
         try {
@@ -64,6 +82,7 @@ function LostPet() {
         }
         try {
             const formData = {
+                petId: petData?.petId,
                 personName,
                 personEmail,
                 personAddress,
@@ -71,7 +90,9 @@ function LostPet() {
                 personMessage,
                 ownerName: userData?.name,
                 ownerEmail: userData?.email,
-                petName: petData?.petName
+                petName: petData?.petName,
+                latitude: lat,
+                longitude: long
             };
             const response = await service.sendLostPetEmail(formData);
             console.log("Response::=", response);
@@ -107,16 +128,12 @@ function LostPet() {
 
     useEffect(() => {
         if (userData) {
-            const getPerInfo = (user) => {
-                if (!user) {
-                    setPetData("");
-                }
-                const lostPet = user?.pets.find(v => v.petId === id);
-                if (lostPet) {
-                    setPetData(lostPet);
-                }
+            const lostPet = userData?.pets.find(v => v.petId === id);
+            if (lostPet) {
+                setPetData(lostPet);
             }
-            getPerInfo(userData);
+        } else {
+            setPetData("");
         }
     }, [userData, id]);
     return (
@@ -131,8 +148,12 @@ function LostPet() {
                             <h2>Hii Friend I'm {petData.petName}</h2>
                             <h2>I'm Lost,  Would you please help me get to my owner {`(${userData.name}) `}?</h2>
                         </div>
+                        <div className="get-location-container">
+                            <h2>You can share this location to my owner so he/she can know where I am right now</h2>
+                            <button className="location-btn" onClick={() => getCurrentGeoLocation()}>Share This Location</button>
+                        </div>
                         <div className="owner-contact-form-container">
-                            <h2>You can contact with my owner by filling this form below</h2>
+                            <h2>Also you can contact with my owner by filling this form below</h2>
                             <div className="owner-contact-form">
                                 <input type="text" value={personName} placeholder="Your Name" onChange={(e) => onFieldChange("personName", e.target.value)} />
                                 <input type="email" className={isEmailInvallid ? "invalid-input" : ""} value={personEmail} placeholder="Email" onChange={(e) => onFieldChange("personEmail", e.target.value)} />

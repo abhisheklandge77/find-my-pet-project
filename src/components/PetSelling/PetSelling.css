@@ -1,4 +1,97 @@
+html{
+    scroll-behavior: smooth;
+}
 .pet-selling-container{
-    padding-top: 6rem;
     text-align: center;
+}
+.pet-shopping-bg{
+    background: url("../../assets/pet-shopping-bg-2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.pet-shopping-text-wrapper{
+    text-align: center;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+}
+.pet-shopping-text{
+    padding-top: 12rem;
+}
+.pet-shopping-text h1{
+    color: #f56a14;
+    font-size: 2em;
+}
+.pet-shopping-text h3{
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+.shop-now-btn{
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: .6rem 2rem;
+}
+.shop-now-btn:hover{
+    background-color:#f56a14;
+    transition: .3s;
+}
+.pet-selling-section{
+    background-color: #f8f8f8;
+    padding-top: 2rem;
+}
+.pet-selling-section h1{
+    text-align: center;
+    color: #088178;
+    font-size: 2em;
+    margin-bottom: 3rem;
+}
+.pet-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.pet-card{
+    border: 1px solid #088178;
+    text-align: center;
+    border-radius: 5px;
+    width: 20%;
+    margin-bottom: 2.5rem;
+}
+.pet-card-image{
+    width: 90%;
+    margin: 1rem auto;
+}
+.pet-card-image img{
+    width: 100%;
+    height: 100%;
+}
+.pet-card-info{
+    padding: 0 0.5rem;
+}
+.pet-card-info p{
+    font-weight: bold;
+    color: #f56a14;
+    margin: 0;
+    line-height: 1.5rem;
+}
+.pet-card-info .price{
+    color: #088178;
+}
+.buy-btn{
+    border: none;
+    outline: none;
+    background-color: #f56a14;
+    border-radius: 5px;
+    color: #fff;
+    padding: .7rem 4rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+.buy-btn:hover{
+    background-color: #e8620e;
+    transition: .3s;
 }

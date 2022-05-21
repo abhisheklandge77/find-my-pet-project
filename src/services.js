@@ -50,6 +50,13 @@ const service = {
                 console.log(err);
             });
     },
+    sendPlaceOrderEmail: async (formData) => {
+        const url = process.env.REACT_APP_FIND_MY_PET_API_ENDPOINT + '/placedOrderMail';
+        return axios.post(url, formData)
+            .then(response => response.data).catch(err => {
+                console.log(err);
+            });
+    },
 }
 
 export default service;

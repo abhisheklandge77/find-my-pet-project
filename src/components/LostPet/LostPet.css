@@ -19,6 +19,18 @@
 .pet-info-container{
     text-align: center;
 }
+.get-location-container{
+    text-align: center;
+}
+.location-btn{
+    border: none;
+    outline: none;
+    padding: .7rem;
+    color: #fff;
+    background-color: #f56a14;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .owner-contact-form-container{
     text-align: center;
     margin-bottom: 2rem;

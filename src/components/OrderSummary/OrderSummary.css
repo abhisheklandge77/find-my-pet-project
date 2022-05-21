@@ -1,0 +1,49 @@
+.order-summary-container{
+    padding-top: 4rem;
+    background-color: #f8f8f8;
+}
+.order-summary-card{
+    background-color: #fff;
+    padding: 1rem 2rem;
+    width: 40%;
+    margin: 4rem auto;
+    border: 1px solid gray;
+}
+.order-summary-card  h1{
+    text-align: center;
+    /* color: #f56a14; */
+}
+.order-summary-info p{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.order-summary-info span{
+    color: #088178;
+    width: 45%;
+    text-align: right;
+}
+.line{
+    border: 1px solid gray;
+    width: 100%;
+}
+.order-summary-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+.order-summary-btn{
+    border: none;
+    outline: none;
+    padding: .7rem 3rem;
+    color: #fff;
+    background-color: #f56a14;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.order-summary-btn:hover{
+    transition: .3s;
+    background-color: #e8620e;
+}

@@ -40,7 +40,7 @@ function Navbar() {
     }, [location.pathname]);
 
     return (
-        <div className={(location.pathname === "/register" || location.pathname === "/login" || location.pathname.includes("lost-pet")) ? "hide-navbar" : "navbar"}>
+        <div className={(location.pathname === "/register" || location.pathname === "/login" || location.pathname.includes("lost-pet") || location.pathname.includes("pet-map")) ? "hide-navbar" : "navbar"}>
             <div className="navbar-header">
                 <div className="logo">
                 <img src={logo} alt="logo" />

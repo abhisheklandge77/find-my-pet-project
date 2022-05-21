@@ -1,0 +1,115 @@
+.order-details-container {
+    padding-top: 4rem;
+    background-color: #f8f8f8;
+}
+
+.order-page-card {
+    width: 80%;
+    margin: 6.125rem auto;
+    border-radius: 20px;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.order-signup-btn {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #f56a14;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.order-signup-btn:hover {
+    transition: .3s;
+    background-color: #e8620e;
+}
+.order-details-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.pet-details-container{
+    border: 1px solid gray;
+    padding: 0 2rem 2rem;
+    width: 40%;
+    text-align: center;
+    margin: 2rem 0;
+}
+.pet-details-container h1{
+    color: #088178;
+}
+.pet-image img{
+    border: 5px solid #f56a14;
+}
+.pet-info p{
+    font-weight: bold;
+}
+.pet-info span{
+    font-weight: bold;
+    color: #088178;
+}
+.pet-description p{
+    color: gray;
+}
+.order-form-container{
+    width: 40%;
+    border: 1px solid gray;
+    margin: 2rem 0;
+    text-align: center;
+}
+.order-form-container h1{
+    color: #088178;
+}
+.order-form{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+.order-form input{
+    outline: none;
+    border: 1px solid #969494;
+    border-radius: 5px;
+    padding: .7rem;
+    margin-bottom: 2rem;
+}
+.invalid-input{
+    border: 1px solid red !important;
+}
+.place-order-btn{
+    border: none;
+    outline: none;
+    padding: .7rem;
+    color: #fff;
+    background-color: #f56a14;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+.place-order-btn:hover{
+    transition: .3s;
+    background-color: #e8620e;
+}
+.place-order-disable-btn{
+    border: none;
+    outline: none;
+    padding: .7rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    background-color: gray;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+.select-payment-container p{
+    font-weight: bold;
+    margin: 0;
+}
+.card-payment-info{
+    display: flex;
+    justify-content: space-between;
+}

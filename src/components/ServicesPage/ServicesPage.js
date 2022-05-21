@@ -35,11 +35,11 @@ function ServicesPage() {
                             <div className="image-bg">
                                 <BsShop />
                             </div>
-                            <div className="service-card-title"><p>Pet Selling</p></div>
+                            <div className="service-card-title"><p>Pet Shopping</p></div>
                             <div className="service-card-text">
                                 <p>Dogs and cats are a common member of the family in homes across the US. No population-based data exist on the frequency of pets getting lost from the home and lost pets can be a source of human and animal suffering.</p>
                             </div>
-                            <button className="services-btn" onClick={() => navigate("/services/pet-selling")}>Sell Your Pet</button>
+                            <button className="services-btn" onClick={() => navigate("/services/pet-selling")}>Shop Now</button>
                         </div>
                     </div>
                 </div>

@@ -109,6 +109,7 @@ function QRCodeForm() {
             return;
         }
         const qrcodeValue = `localhost:3000/lost-pet/${userInfo.id}&${btoa(petName)}${Date.now()}`;
+        console.log("QR Code URL:::", qrcodeValue);
         setQRCodeValue(qrcodeValue);
     }
     const downloadQRCode = () => {

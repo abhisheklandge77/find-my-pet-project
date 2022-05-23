@@ -64,7 +64,7 @@ function PetMap() {
             container: petMapContainerRef.current,
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [long, lat],
-            zoom: 10,
+            zoom: 14,
         });
 
         petMap.addControl(new mapboxgl.NavigationControl(), 'bottom-right');

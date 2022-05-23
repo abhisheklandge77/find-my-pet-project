@@ -1,0 +1,75 @@
+.edit-profile-container {
+    margin: 0;
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.edit-profile-form {
+    width: 40%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.edit-profile-form input {
+    outline: none;
+    border: 1px solid #969494;
+    border-radius: 5px;
+    padding: .7rem;
+    margin-bottom: 1.5rem;
+}
+
+.invalid-input {
+    border: 1px solid red !important;
+}
+
+input[type="file"]:before {
+    content: attr(placeholder) !important;
+    color: gray;
+    margin-right: 0.5em;
+}
+
+input[type="file"]:focus:before,
+input[type="file"]:valid:before {
+    content: "";
+}
+
+.edit-profile-update-btn {
+    border: none;
+    outline: none;
+    padding: .7rem 3rem;
+    color: #fff;
+    background-color: #f56a14;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-profile-update-btn:hover {
+    transition: .3s;
+    background-color: #e8620e;
+}
+
+.disable-btn {
+    pointer-events: none !important;
+    background-color: gray !important;
+}
+
+.edit-profile-cancel-btn {
+    border: none;
+    outline: none;
+    padding: .7rem 3rem;
+    color: #fff;
+    background-color: #088178;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem;
+}
+.edit-profile-cancel-btn:hover{
+    transition: .3s;
+    background-color: #077069;
+}

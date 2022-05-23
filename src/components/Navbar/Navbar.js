@@ -65,7 +65,7 @@ function Navbar() {
                 {
                     (userInfo && userInfo?.id) ?
                         (<div className="navbar-user">
-                            <span className="navbar-username"><p>Hey {userInfo.name}</p><FaUserAlt /></span>
+                            <span className="navbar-username"><p>Hey {userInfo.name}</p><FaUserAlt title="See Profile" className="user-profile-btn" onClick={() => navigate("/user-profile")} /></span>
                             <button className="logout-button" onClick={() => navigate("/login")}>Logout</button>
                         </div>)
                         : (<div className="navbar-btn-container">

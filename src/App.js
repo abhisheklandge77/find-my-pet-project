@@ -19,6 +19,8 @@ import LostPet from './components/LostPet/LostPet';
 import PetMap from './components/PetMap/PetMap';
 import OrderPage from './components/OrderPage/OrderPage';
 import OrderSummary from './components/OrderSummary/OrderSummary';
+import UserProfile from './components/UserProfile/UserProfile';
+import EditProfile from './components/EditProfile/EditProfile';
 
 function App() {
   const [userInfo, setUserInfo] = useState();
@@ -46,6 +48,8 @@ function App() {
           <Route path="/contact" element={<ContactPage />}></Route>
           <Route path="/register" element={<SignUpPage />}></Route>
           <Route path="/login" element={<LoginPage />}></Route>
+          <Route path="/user-profile" element={<UserProfile />}></Route>
+          <Route path="/edit-profile" element={<EditProfile />}></Route>
           <Route path="/services/get-qr-code" element={<QRCodeForm />}></Route>
           <Route path="/services/pet-selling" element={<PetSelling />}></Route>
           <Route path="/services/pet-selling/place-order" element={<OrderPage />}></Route>

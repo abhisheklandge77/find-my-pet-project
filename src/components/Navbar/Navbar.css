@@ -115,6 +115,10 @@
     background-color: #f56a14;
     transition: 0.3s;
 }
+.user-profile-btn:hover{
+    fill: #f56a14;
+    transition: .3s;
+}
 
 @media screen and (min-width: 900px){
     .navbar{

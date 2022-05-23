@@ -36,6 +36,13 @@ const service = {
                 console.log(err);
             });
     },
+    deletePet: async (formData) => {
+        const url = process.env.REACT_APP_FIND_MY_PET_API_ENDPOINT + '/deletePet';
+        return axios.post(url, formData)
+            .then(response => response.data).catch(err => {
+                console.log(err);
+            });
+    },
     getUserInfo: async (params) => {
         const url = process.env.REACT_APP_FIND_MY_PET_API_ENDPOINT + '/getUserById';
         return axios.get(url, {params})
@@ -52,6 +59,13 @@ const service = {
     },
     sendPlaceOrderEmail: async (formData) => {
         const url = process.env.REACT_APP_FIND_MY_PET_API_ENDPOINT + '/placedOrderMail';
+        return axios.post(url, formData)
+            .then(response => response.data).catch(err => {
+                console.log(err);
+            });
+    },
+    updateUser: async (formData) => {
+        const url = process.env.REACT_APP_FIND_MY_PET_API_ENDPOINT + '/updateUser';
         return axios.post(url, formData)
             .then(response => response.data).catch(err => {
                 console.log(err);

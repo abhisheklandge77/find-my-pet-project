@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import "./EditProfile.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import UserContext from "../../UserContext/store";
 import service from "../../services";
 import Footer from "../Footer/Footer";
@@ -17,7 +17,7 @@ function EditProfile() {
     const [isEmailInvallid, setIsEmailInvallid] = useState(false);
 
     const navigate = useNavigate();
-
+    const location = useLocation();
 
     const onFieldChange = (field, value) => {
         if (field === "name") {
@@ -93,6 +93,16 @@ function EditProfile() {
         }
         return true;
     }
+
+    useEffect(() => {
+        if(location?.state?.userData){
+            setName(location?.state?.userData?.name);
+            setEmail(location?.state?.userData?.email);
+            setAddress(location?.state?.userData?.address);
+            const phoneNumber = `+${location?.state?.userData?.phone.toString()}`;
+            setPhone(phoneNumber);
+        }
+    }, [location?.state?.userData]);
 
     return (
         <div className="edit-profile-container">

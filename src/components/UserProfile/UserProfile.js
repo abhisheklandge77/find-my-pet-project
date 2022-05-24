@@ -66,7 +66,7 @@ function UserProfile() {
                     <p className="user-name">{userData?.name}</p>
                     <p className="user-email">{userData?.email}</p>
                 </div>
-                <button className="edit-profile-btn" onClick={() => navigate("/edit-profile")}>Edit Profile</button>
+                <button className="edit-profile-btn" onClick={() => navigate("/edit-profile",{ state: {userData}})}>Edit Profile</button>
                 <button className="user-add-pet-btn" onClick={() => navigate("/services/get-qr-code")}>Add Pet</button>
                 <div className="pets-info">
                     <p>Your Pets:</p>

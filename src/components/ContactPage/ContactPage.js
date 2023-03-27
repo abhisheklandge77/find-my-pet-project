@@ -122,7 +122,7 @@ function ContactPage() {
                     </div>
                     <div className="contact-details">
                         <span className="icon-wrapper"><FaEnvelopeOpen /></span>
-                        <p>findmypet@gmail.com</p>
+                        <p>findmypetindialtd@gmail.com</p>
                     </div>
                     <div className="social-media-links"></div>
                 </div>

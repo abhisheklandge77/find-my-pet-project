@@ -140,7 +140,7 @@ function SignUpPage() {
           <button className="register-btn" onClick={() => saveUserData()}>Register</button>
 
           <GoogleLogin
-            clientId={clientId}
+            clientId={process.env.FIND_MY_PET_GOOGLE_CLIENT_ID || clientId}
             buttonText="Sign In with Google"
             onSuccess={onSuccess}
             onFailure={onFailure}

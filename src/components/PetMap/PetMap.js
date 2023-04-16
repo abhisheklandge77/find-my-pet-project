@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import mapboxgl from 'mapbox-gl';
 import Footer from "../Footer/Footer";
 import service from "../../services";
-mapboxgl.accessToken = "pk.eyJ1IjoiYWJoaXNoZWstbGFuZGdlIiwiYSI6ImNsMm42Z3ZqazB1MHozY211aGptM2YzZnoifQ.3-Ki2MdqJu95TUAeB2BWkg";
+mapboxgl.accessToken = process.env.REACT_APP_FIND_MY_PET_MAPBOX_ACCESS_TOKEN || "pk.eyJ1IjoiYWJoaXNoZWstbGFuZGdlIiwiYSI6ImNsMm42Z3ZqazB1MHozY211aGptM2YzZnoifQ.3-Ki2MdqJu95TUAeB2BWkg";
 
 
 function PetMap() {

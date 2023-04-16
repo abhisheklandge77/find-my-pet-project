@@ -122,7 +122,7 @@ function LoginPage() {
           <button className="register-btn" onClick={() => saveUserData()}>Log In</button>
 
           <GoogleLogin
-            clientId={clientId}
+            clientId={process.env.FIND_MY_PET_GOOGLE_CLIENT_ID || clientId}
             buttonText="Sign In with Google"
             onSuccess={onSuccess}
             onFailure={onFailure}

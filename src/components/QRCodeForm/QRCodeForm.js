@@ -83,7 +83,7 @@ function QRCodeForm() {
     }
 
     try {
-      const petId = `${userInfo?.id}&${btoa(petName)}${Date.now()}`;
+      const petId = `${userInfo?.id}&${btoa(petName)}`;
       const formData = {
         petId,
         petName,
@@ -114,9 +114,7 @@ function QRCodeForm() {
     if (!allFieldsValid) {
       return;
     }
-    const qrcodeValue = `${baseUrl}/lost-pet/${userInfo.id}&${btoa(
-      petName
-    )}${Date.now()}`;
+    const qrcodeValue = `${baseUrl}/lost-pet/${userInfo.id}&${btoa(petName)}`;
     setQRCodeValue(qrcodeValue);
   };
   const downloadQRCode = () => {

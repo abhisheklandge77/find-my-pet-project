@@ -52,6 +52,7 @@ function LostPet() {
         id: userId,
       };
       const response = await service.getUserInfo(payload);
+      console.log("Response:::", response);
       if (response?._id) {
         setUserData(response);
         // getPerInfo(response);
@@ -132,6 +133,7 @@ function LostPet() {
   useEffect(() => {
     if (id) {
       const userIds = id.toString().split("&");
+      console.log("ID:::", userIds);
       getUserDetails(userIds[0]);
     }
   }, [id]);

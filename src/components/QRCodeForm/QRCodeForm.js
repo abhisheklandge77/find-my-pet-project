@@ -14,7 +14,7 @@ function QRCodeForm() {
 
   const baseUrl =
     process.env.FIND_MY_PET_CLIENT_ENDPOINT ||
-    "https://admirable-torte-e51d6b.netlify.app";
+    "https://find-my-pet-tau.vercel.app/";
 
   const [petName, setPetName] = useState("");
   const [resizeImgURL, setResizeImgURL] = useState("");

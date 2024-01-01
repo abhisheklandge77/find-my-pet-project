@@ -6,11 +6,14 @@ import service from "../../services";
 import userImage from "../../assets/user-profile.png";
 import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
+import QRCodeModal from "../QRCodeModal/QRCodeModal";
 
 function UserProfile() {
   const userInfo = useContext(UserContext);
   const [userData, setUserData] = useState();
   const [reloadPage, setReloadPage] = useState(false);
+  const [showQRModal, setShowQRModal] = useState(false);
+  const [petName, setPetName] = useState("");
 
   const navigate = useNavigate();
 
@@ -91,6 +94,15 @@ function UserProfile() {
                   <div className="user-pet-info">
                     <h3>{pet.petName}</h3>
                     <button
+                      className="get-qrcode-btn"
+                      onClick={() => {
+                        setPetName(pet.petName);
+                        setShowQRModal(true);
+                      }}
+                    >
+                      Get QR Code
+                    </button>
+                    <button
                       className="delete-pet-btn"
                       onClick={() => onDeleteBtnCLick(pet)}
                     >
@@ -107,6 +119,11 @@ function UserProfile() {
           )}
         </div>
       </div>
+      <QRCodeModal
+        petName={petName}
+        showQRModal={showQRModal}
+        setShowQRModal={setShowQRModal}
+      />
       <Footer />
     </div>
   );
